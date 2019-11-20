@@ -5,7 +5,6 @@ from model import model
 TRAIN_PATH = 'data/sample'
 SAVE_PATH = 'trained_models/model.h5';
 
-# TODO: set seed
 
 def train_model(model, save_path, data_path):
 	model.compile(
@@ -34,6 +33,3 @@ def train_model(model, save_path, data_path):
 if __name__ == '__main__':
 	print('Training model...')
 	train_model(model, save_path=SAVE_PATH, data_path=TRAIN_PATH)
-
-	# print('Evaulating model')
-	# evaluate_model(model, data_path=TEST_PATH)
