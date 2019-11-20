@@ -2,8 +2,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator, load_img, i
 
 from model import model
 
-TRAIN_PATH = 'data/train'
-TEST_PATH = 'data/test'
+TRAIN_PATH = 'data/sample'
 SAVE_PATH = 'trained_models/model.h5';
 
 # TODO: set seed
@@ -30,15 +29,6 @@ def train_model(model, save_path, data_path):
 
 	print('Saving model as', save_path)
 	model.save(save_path);
-
-
-def evaluate_model(model, data_path='data/test'):
-	data_gen = ImageDataGenerator(rescale=1./255)
-	test_generator = data_gen.flow_from_directory(data_path,
-		target_size=(300, 300),
-		class_mode='binary'
-	)
-	model.evaluate_generator(test_generator, verbose=1)
 
 
 if __name__ == '__main__':
