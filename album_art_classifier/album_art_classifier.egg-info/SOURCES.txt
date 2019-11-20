@@ -1,0 +1,10 @@
+setup.py
+album_art_classifier/__init__.py
+album_art_classifier/load_model.py
+album_art_classifier/model.py
+album_art_classifier/predict_model.py
+album_art_classifier/train.py
+album_art_classifier.egg-info/PKG-INFO
+album_art_classifier.egg-info/SOURCES.txt
+album_art_classifier.egg-info/dependency_links.txt
+album_art_classifier.egg-info/top_level.txt
