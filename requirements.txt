@@ -1,9 +1,12 @@
 absl-py==0.8.1
+-e git+https://github.com/Russell-Pollari/ci-cd-example.git@1f3a0901a5acba3aae3ba7d4423d9e594a62708b#egg=album_art_classifier&subdirectory=album_art_classifier
 astor==0.8.0
 cachetools==3.1.1
 certifi==2019.9.11
 chardet==3.0.4
 Click==7.0
+entrypoints==0.3
+flake8==3.7.9
 Flask==1.1.1
 gast==0.2.2
 google-auth==1.6.3
@@ -19,6 +22,7 @@ Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.0
 Markdown==3.1.1
 MarkupSafe==1.1.1
+mccabe==0.6.1
 numpy==1.17.3
 oauthlib==3.1.0
 opt-einsum==3.1.0
@@ -26,6 +30,8 @@ Pillow==6.2.1
 protobuf==3.10.0
 pyasn1==0.4.7
 pyasn1-modules==0.2.7
+pycodestyle==2.5.0
+pyflakes==2.1.1
 requests==2.22.0
 requests-oauthlib==1.2.0
 rsa==4.0
@@ -40,5 +46,3 @@ tf-estimator-nightly==1.14.0.dev2019060501
 urllib3==1.25.6
 Werkzeug==0.16.0
 wrapt==1.11.2
-
--e ./album_art_classifier
