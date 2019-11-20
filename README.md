@@ -1,29 +1,11 @@
 # Basic Flask app for Heroku
 
-Minimal working Flask app for Heroku.  
-Adds two numbers (wow!).
-
-Live example here:
-https://sm-flask-heroku-tutorial.herokuapp.com/
-
 
 ## Deploying:
 1. Create heroku account and install heroku CLI: https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 2. `$ heroku create <app_name>`
 3. `$ git push heroku master`
 
-
-## Directory structure
-```
-├── templates // html templates that can be used with render_template
-|   └── home.html
-├── .gitignore // files and folders to keep out of version control
-├── app.py // Flask app and routes
-├── Procfile // tells Heroku what to run
-├── requirements.txt // tells Heroku what to install
-├── runtime.txt // specifies the python version for Heroku
-└── utils.py // utility functions
-```
 
 ## Development
 
