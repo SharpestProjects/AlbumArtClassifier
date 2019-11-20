@@ -1,11 +1,10 @@
-import os
-import numpy as np
 from flask import Flask, request, render_template, jsonify
 
 from album_art_classifier.predict_model import predict_model
 from album_art_classifier.load_model import model
 
 app = Flask(__name__)
+
 
 @app.route('/', methods=['GET'])
 def index():
@@ -22,7 +21,7 @@ def predict():
 		# TODO: check file type and format etc
 		genre = predict_model(model, file)
 
-		return jsonify({ 'genre': genre });
+		return jsonify({'genre': genre})
 
 
 if __name__ == '__main__':
