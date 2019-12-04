@@ -1,11 +1,14 @@
+import os
 from flask import Flask, request, render_template, jsonify
 
 from album_art_classifier.predict_model import predict_model
-from album_art_classifier.load_model import load_keras_model
+from mlflow.keras import load_model
+
 
 app = Flask(__name__)
 
-model = load_keras_model('trained_models/model.h5')
+model_uri = os.getenv('MODEL_URI', '')
+model = load_model(model_uri)
 
 
 @app.route('/', methods=['GET'])
@@ -24,7 +27,3 @@ def predict():
 		genre = predict_model(model, file)
 
 		return jsonify({'genre': genre})
-
-
-if __name__ == '__main__':
-	app.run()

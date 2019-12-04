@@ -1,3 +1,4 @@
+import os
 import argparse
 
 import mlflow
@@ -30,7 +31,7 @@ if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--train_dir', default='data/train')
 	parser.add_argument('--val_dir', default='data/validate')
-	parser.add_argument('--save_path', default='trained_models/model.h5')
+	parser.add_argument('--save_path', default=None)
 	parser.add_argument('--epochs', type=int, default=10)
 	parser.add_argument('--batch_size', type=int, default=32)
 	parser.add_argument('--exp_name', default='test')
@@ -38,6 +39,9 @@ if __name__ == '__main__':
 
 	kwargs = vars(args)
 	exp_name = kwargs.pop('exp_name')
+
+	tracking_uri = os.getenv('MLFLOW_TRACKING_URI', '')
+	mlflow.set_tracking_uri(tracking_uri)
 
 	experiment_id = mlflow.set_experiment(exp_name)
 

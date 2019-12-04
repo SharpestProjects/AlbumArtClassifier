@@ -13,6 +13,10 @@
 `$ python scripts/download_dataset.py`  
 
 #### Train model  
+Set `MLFLOW_TRACKING_URI` env variable, e.g.  
+`$ export MLFLOW_TRACKING_URI=http://localhost:3000`
+
+Run training script:
 ```
 $ python scripts/train.py  \
   --data_dir data/train
@@ -20,13 +24,15 @@ $ python scripts/train.py  \
   --epochs 10
   --batch_size 32
   --exp_name test
-  --save_path trained_models/model.h5
 ```
 
 
 #### Run Flask app locally
 To ensure app runs in debug mode set `FLASK_ENV` envioronment variable before running:  
 `$ export FLASK_ENV=development`
+
+Set `MODEL_URI` env variable, e.g.  
+`$ export MODEL_URI=s3://my_bucket/path/to/model`
 
 Start Flask app  
 `$ python app.py`
