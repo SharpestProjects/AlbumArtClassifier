@@ -13,7 +13,15 @@
 `$ python scripts/download_dataset.py`  
 
 #### Train model  
-`$ python scripts/train.py --data_dir data/train --save_path trained_models/model.h5 --epochs 10 --batch_size 32`
+```
+$ python scripts/train.py  \
+  --data_dir data/train
+  --val_dir data/val
+  --epochs 10
+  --batch_size 32
+  --exp_name test
+  --save_path trained_models/model.h5
+```
 
 
 #### Run Flask app locally
