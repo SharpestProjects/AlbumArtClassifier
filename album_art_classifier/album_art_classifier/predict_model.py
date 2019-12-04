@@ -10,10 +10,6 @@ def predict_model(model, file):
 
 	# TODO: validate input
 	pred = model.predict(np.expand_dims(x, axis=0))
-
-	print('Input', x)
-	print('Output', pred)
-
 	genre = 'metal!' if pred[0][0] < 0.5 else 'not metal'
 
 	return genre
