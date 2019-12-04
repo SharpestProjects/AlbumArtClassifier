@@ -9,12 +9,13 @@ def train_model(
 	data_dir='data/train',
 	save_path=None,
 	epochs=10,
-	batch_size=32
+	batch_size=32,
+	callbacks=[]
 ):
 	model.compile(
 		loss='binary_crossentropy',
 		optimizer='rmsprop',
-		metrics=['accuracy']
+		metrics=['acc']
 	)
 
 	data_gen = ImageDataGenerator(rescale=1. / 255)
@@ -33,7 +34,8 @@ def train_model(
 		train_generator,
 		steps_per_epoch=train_steps,
 		epochs=epochs,
-		verbose=1
+		verbose=1,
+		callbacks=callbacks
 	)
 
 	if save_path is not None:
