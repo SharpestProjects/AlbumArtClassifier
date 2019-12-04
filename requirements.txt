@@ -1,5 +1,4 @@
 absl-py==0.8.1
--e git+https://github.com/Russell-Pollari/ci-cd-example.git@1f3a0901a5acba3aae3ba7d4423d9e594a62708b#egg=album_art_classifier&subdirectory=album_art_classifier
 astor==0.8.0
 cachetools==3.1.1
 certifi==2019.9.11
@@ -46,3 +45,5 @@ tf-estimator-nightly==1.14.0.dev2019060501
 urllib3==1.25.6
 Werkzeug==0.16.0
 wrapt==1.11.2
+
+-e ./album_art_classifier
