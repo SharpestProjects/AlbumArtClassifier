@@ -1,9 +1,11 @@
 from flask import Flask, request, render_template, jsonify
 
 from album_art_classifier.predict_model import predict_model
-from album_art_classifier.load_model import model
+from album_art_classifier.load_model import load_keras_model
 
 app = Flask(__name__)
+
+model = load_keras_model('trained_models/model.h5')
 
 
 @app.route('/', methods=['GET'])
