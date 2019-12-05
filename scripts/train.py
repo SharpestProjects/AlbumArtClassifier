@@ -24,7 +24,7 @@ class MlFlowKerasLogger(Callback):
 			'val_loss': logs['val_loss']
 		}, step=epoch)
 
-		mlflow.keras.log_model(self.model, 'models/model_chkpt_{}'.format(epoch))
+		mlflow.keras.log_model(self.model, 'models/checkpoint_{}'.format(epoch))
 
 
 if __name__ == '__main__':
