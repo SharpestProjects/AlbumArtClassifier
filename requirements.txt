@@ -1,5 +1,4 @@
 absl-py==0.8.1
--e git+https://github.com/Russell-Pollari/ci-cd-example.git@31f82055e85390b555fc7fda39a629290b570dba#egg=album_art_classifier&subdirectory=album_art_classifier
 alembic==1.3.1
 astor==0.8.0
 attrs==19.3.0
@@ -85,3 +84,5 @@ Werkzeug==0.16.0
 wget==3.2
 wrapt==1.11.2
 zipp==0.6.0
+
+-e ./album_art_classifier
