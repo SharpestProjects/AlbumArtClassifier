@@ -7,8 +7,10 @@ import tarfile
 def download_dataset(data_url):
 	with tempfile.TemporaryDirectory() as tmpdir:
 		tmp_path = '{}/data.tar.gz'.format(tmpdir)
+		print('Downloading', data_url)
 		wget.download(data_url, tmp_path)
 
+		print('Extracting', tmp_path)
 		with tarfile.open(tmp_path) as tar:
 			tar.extractall()
 
