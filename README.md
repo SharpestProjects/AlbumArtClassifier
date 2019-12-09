@@ -86,11 +86,11 @@ Points to an [MLFlow model](https://mlflow.org/docs/latest/models.html  ) with a
 
 (if using S3, will also need to set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables)
 
-Start Flask app
+Start Flask app  
 `$ flask run`
 
 
-## Deploying Flask app
+## Deploying To Heroku
 
 1. Create heroku account and install heroku CLI: https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 2. `$ heroku create <app_name>`
