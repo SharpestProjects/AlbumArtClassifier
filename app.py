@@ -1,9 +1,11 @@
 import os
+from dotenv import load_dotenv
 from flask import Flask, request, render_template, jsonify
 
 from album_art_classifier.predict_model import predict_model
 from mlflow.keras import load_model
 
+load_dotenv()
 
 app = Flask(__name__)
 
